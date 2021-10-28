@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Lycan : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int HPLycan = 2;
+    public int LvlLycan = 1;
+    public int DMGLycan = 2;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

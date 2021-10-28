@@ -7,14 +7,14 @@ public class Player : MonoBehaviour
     public int CurrentPlayerHP = 4;
     public int CurrentNumberOfCardInDeck = 5;
     public int MaxNumberOfCardInDeck = 5;
+    public int NumberOfMagicCardPosed = 0;
+    public int NumberOfMonsterCardPosed = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
      
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -44,23 +44,65 @@ public class Player : MonoBehaviour
         {
 
         }
-        if (CurrentNumberOfCardInDeck == 4)
+        if (CurrentNumberOfCardInDeck == 3)
         {
 
         }
-        if (CurrentNumberOfCardInDeck == 4)
+        if (CurrentNumberOfCardInDeck == 2)
         {
 
         }
-        if (CurrentNumberOfCardInDeck == 4)
+        if (CurrentNumberOfCardInDeck == 1)
         {
 
         }
-        if (CurrentNumberOfCardInDeck == 4)
+        if (CurrentNumberOfCardInDeck == 0)
         {
 
         }
         if (MaxNumberOfCardInDeck > 5)
+        {
+
+        }
+    }
+    public void CardNumberPosed()
+    {
+        if (NumberOfMonsterCardPosed == 4)
+        {
+
+        }
+        if (NumberOfMonsterCardPosed == 3)
+        {
+
+        }
+        if (NumberOfMonsterCardPosed == 2)
+        {
+
+        }
+        if (NumberOfMonsterCardPosed == 1)
+        {
+
+        }
+        if (NumberOfMonsterCardPosed == 0)
+        {
+
+        }
+        if (NumberOfMonsterCardPosed > 4)
+        {
+
+        }
+    }
+    public void MagicCardNumberPosed()
+    {
+        if (NumberOfMagicCardPosed == 1)
+        {
+
+        }
+        if (NumberOfMagicCardPosed == 0)
+        {
+
+        }
+        if (NumberOfMagicCardPosed > 1)
         {
 
         }

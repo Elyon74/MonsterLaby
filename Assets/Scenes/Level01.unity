@@ -278,7 +278,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d05cda2f75f5be5468076719931fc033, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -302,6 +302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d93526d9c2b6db47af2a303fcb26257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentPlayerHP: 4
+  CurrentNumberOfCardInDeck: 5
+  MaxNumberOfCardInDeck: 5
+  NumberOfMagicCardPosed: 0
+  NumberOfMonsterCardPosed: 0
 --- !u!1 &314751189
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +498,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c7433a04568cb094d95d1d8232841487, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -755,6 +760,8 @@ GameObject:
   - component: {fileID: 729755069}
   - component: {fileID: 729755070}
   - component: {fileID: 729755071}
+  - component: {fileID: 729755073}
+  - component: {fileID: 729755072}
   m_Layer: 0
   m_Name: Sprite-MoveBack
   m_TagString: Untagged
@@ -840,6 +847,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c7cae1bbe09bd45beace00c07234d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &729755072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729755068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &729755073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729755068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 729755068}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &776928956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,6 +1141,8 @@ GameObject:
   - component: {fileID: 822301327}
   - component: {fileID: 822301328}
   - component: {fileID: 822301329}
+  - component: {fileID: 822301331}
+  - component: {fileID: 822301330}
   m_Layer: 0
   m_Name: Sprite-MoveRight
   m_TagString: Untagged
@@ -1185,6 +1228,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae31682b5d6650b4eb58448af97e6b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &822301330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822301326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &822301331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822301326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 822301326}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &838312550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18b2f05f84a06f469c464faa6b4b1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPLycan: 2
+  LvlLycan: 1
+  DMGLycan: 2
 --- !u!212 &843193459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1375,6 +1455,8 @@ GameObject:
   - component: {fileID: 884646676}
   - component: {fileID: 884646677}
   - component: {fileID: 884646678}
+  - component: {fileID: 884646680}
+  - component: {fileID: 884646679}
   m_Layer: 0
   m_Name: Sprite-MoveLeft
   m_TagString: Untagged
@@ -1460,6 +1542,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3e00ab333bbe340bbe6537e86338a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &884646679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884646675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &884646680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884646675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 884646675}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &894016845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1619,8 @@ GameObject:
   - component: {fileID: 905355372}
   - component: {fileID: 905355373}
   - component: {fileID: 905355374}
+  - component: {fileID: 905355376}
+  - component: {fileID: 905355375}
   m_Layer: 0
   m_Name: Sprite-MoveUp
   m_TagString: Untagged
@@ -1588,6 +1706,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530d73b482ab5a0418bb0e8a95f1a45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &905355375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905355371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &905355376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905355371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 905355371}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &990361528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1867,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6eac7ae4890d4a45b16e66dece96a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPAncor: 3
+  LvlAncor: 1
+  DMGAncor: 1
 --- !u!212 &1067150576
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1946,6 +2101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6eac7ae4890d4a45b16e66dece96a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPAncor: 3
+  LvlAncor: 1
+  DMGAncor: 1
 --- !u!1 &1173846344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20f2e54bf8e64694b8fcf13a2a1379ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DMGFire: 1
 --- !u!1 &1613925984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +2794,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18b2f05f84a06f469c464faa6b4b1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPLycan: 2
+  LvlLycan: 1
+  DMGLycan: 2
 --- !u!1 &1798915366
 GameObject:
   m_ObjectHideFlags: 0
